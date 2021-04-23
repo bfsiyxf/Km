@@ -5,11 +5,10 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Km.Data.IRepository
+namespace Km.Data.Service
 {
-    public  interface IBaseRepository<T> where T : class
+     public  interface IBaseService<T> where T:class
     {
-        
         /// <summary>
         /// 创建一个实体对象
         /// </summary>
@@ -47,6 +46,5 @@ namespace Km.Data.IRepository
         /// <param name="objs"></param>
         /// <returns></returns>
         Task UpdateAsync(IEnumerable<T> objs);
-    
     }
 }
