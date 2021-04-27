@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Km.Data.Service
+namespace Km.Data.IService
 {
      public  interface IBaseService<T> where T:class
     {

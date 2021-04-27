@@ -30,14 +30,8 @@ namespace Km.Data.Repository
             builder.Entity<IdentityUserLogin<int>>().ToTable("Core_UserLogin");
             builder.Entity<IdentityUserToken<int>>().ToTable("Core_UserToken");
 
-            builder.Entity<Article>(entity =>
-            {
-                entity.ToTable("Article");
-            });
-            builder.Entity<Tag>(entity =>
-            {
-                entity.ToTable("Tag");
-            });
+            builder.Entity<Article>().ToTable("Article");
+            builder.Entity<Tag>().ToTable("Tag");
         }
     }
 }

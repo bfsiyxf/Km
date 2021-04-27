@@ -13,5 +13,6 @@ namespace Km.Data.Model
         [StringLength(maximumLength: 256)]
         public string TagName { get; set; }
         public ICollection<Article> Articles { get; set; }
+        public ICollection<ArticleTag> ArticleTags { get; set; }
     }
 }

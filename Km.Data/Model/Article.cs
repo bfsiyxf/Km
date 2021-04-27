@@ -44,7 +44,8 @@ namespace Km.Data.Model
         /// 创建时间
         /// </summary>
         public DateTime CreateOn { get; set; }
-        public ICollection<Tag> Tags { get; set; }
+        public  ICollection<Tag> Tags { get; set; }
+        public ICollection<ArticleTag> ArticleTags { get; set; }
 
     }
 }

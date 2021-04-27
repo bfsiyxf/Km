@@ -5,12 +5,14 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Km.Data.IService;
 
 namespace Km.Data.Service
 {
     public class BaseService<T> : IBaseService<T> where T : class
     {
         protected IBaseRepository<T> _iBaseRepository;
+
         public async  Task<T> CreateAsync(T obj)
         {
             throw new NotImplementedException();
