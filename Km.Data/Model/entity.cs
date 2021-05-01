@@ -16,5 +16,9 @@ namespace Km.Data.Model
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        public static implicit operator Entity(Role r)
+        {
+            return new Entity() { Id = r.Id };
+        }
     }
 }

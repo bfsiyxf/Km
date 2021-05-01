@@ -1,14 +1,13 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Km.Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Km.Data.Model
+namespace Km.Data.IService
 {
-    public class Role : IdentityRole<int>
+    public  interface IArticleService:IBaseService<Article>
     {
-        
     }
 }

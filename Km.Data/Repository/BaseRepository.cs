@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace Km.Data.Repository
 {
-    public  class CoreRepository<T> : IBaseRepository<T> where T : Entity
+    public  class BaseRepository<T> : IBaseRepository<T> where T : Entity
     {
         protected readonly DbSet<T> _entityes;
         protected readonly DbContext _db;
 
-        public CoreRepository(DbContext context)
+        public BaseRepository(DbContext context)
         {
             this._entityes = context.Set<T>();
             this._db = context;

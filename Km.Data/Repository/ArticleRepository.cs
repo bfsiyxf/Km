@@ -6,11 +6,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace Km.Data.Repository
 {
-    public class ArticleRepository : CoreRepository<Article>, IArticleRepository
+    public class ArticleRepository : BaseRepository<Article>, IArticleRepository
     {
         private readonly KmContext _db;
         public ArticleRepository(KmContext db) : base(db) => _db = db;
@@ -35,30 +34,30 @@ namespace Km.Data.Repository
             return article;
         }
 
-        public Task DeleteAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task DeleteAsync(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task<IEnumerable<Article>> FindAsync(Expression<Func<Article, bool>> predicate)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<IEnumerable<Article>> FindAsync(Expression<Func<Article, bool>> predicate)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task<Article> GetAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<Article> GetAsync(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task UpdateAsync(Article obj)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task UpdateAsync(Article obj)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task UpdateAsync(IEnumerable<Article> objs)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task UpdateAsync(IEnumerable<Article> objs)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 
 
