@@ -15,37 +15,37 @@ namespace Km.Data.Service
 
         public async  Task<T> CreateAsync(T obj)
         {
-            throw new NotImplementedException();
+            return await _iBaseRepository.CreateAsync(obj);
         }
 
-        Task<IEnumerable<T>> IBaseService<T>.CreateRangeAsync(IEnumerable<T> objs)
+        public async Task<IEnumerable<T>> CreateRangeAsync(IEnumerable<T> objs)
         {
-            throw new NotImplementedException();
+            return await _iBaseRepository.CreateRangeAsync(objs);
         }
 
-        Task IBaseService<T>.DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+             await _iBaseRepository.DeleteAsync(id);
         }
 
-        Task<IEnumerable<T>> IBaseService<T>.FindAsync(Expression<Func<T, bool>> predicate)
+        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return await _iBaseRepository.FindAsync(predicate);
         }
 
-        Task<T> IBaseService<T>.GetAsync(int id)
+         public  async Task<T> GetAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _iBaseRepository.GetAsync(id);
         }
 
-        Task IBaseService<T>.UpdateAsync(T obj)
+        public async Task UpdateAsync(T obj)
         {
-            throw new NotImplementedException();
+             await _iBaseRepository.UpdateAsync(obj);
         }
 
-        Task IBaseService<T>.UpdateAsync(IEnumerable<T> objs)
+        public async  Task UpdateAsync(IEnumerable<T> objs)
         {
-            throw new NotImplementedException();
+            await _iBaseRepository.UpdateAsync(objs);
         }
     }
 }

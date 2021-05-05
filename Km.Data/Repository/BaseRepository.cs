@@ -95,7 +95,7 @@ namespace Km.Data.Repository
             return dbUpdEx;
         }
 
-        Task<IEnumerable<T>> IBaseRepository<T>.CreateRangeAsync(IEnumerable<T> objs)
+          Task<IEnumerable<T>> IBaseRepository<T>.CreateRangeAsync(IEnumerable<T> objs)
         {
             throw new NotImplementedException();
         }

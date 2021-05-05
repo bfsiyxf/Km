@@ -11,8 +11,8 @@ namespace Km.Data.Repository
 {
     public class ArticleRepository : BaseRepository<Article>, IArticleRepository
     {
-        private readonly KmContext _db;
-        public ArticleRepository(KmContext db) : base(db) => _db = db;
+        //private readonly KmContext _db;
+        public ArticleRepository(KmContext db) : base(db) { }
 
 
        public async Task<Article> CreateAsync(Article article,IEnumerable<string> tagNames)
@@ -21,7 +21,7 @@ namespace Km.Data.Repository
             {
                 //去除空字符和重复字符
                 tagNames=tagNames.Where(s => !string.IsNullOrWhiteSpace(s)).Distinct();
-                var tags = _db.Set<Tag>();
+                var tags =  _db.Set<Tag>();
                 foreach(var name in tagNames)
                 {
                     var tag = tags.First(t => t.TagName.ToUpper() == name.ToUpper());

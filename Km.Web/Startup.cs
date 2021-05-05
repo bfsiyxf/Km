@@ -1,3 +1,4 @@
+using Km.Data.IRepository;
 using Km.Data.Model;
 using Km.Data.Repository;
 using Km.Web.Data;
@@ -65,6 +66,9 @@ namespace Km.Web
             //services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
             //    .AddEntityFrameworkStores<KmDbContext>();
             services.AddControllersWithViews();
+
+            //services.AddSingleton<ITagRepository, TagRepository>();
+            //services.AddSingleton<IArticleRepository, ArticleRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -94,7 +98,7 @@ namespace Km.Web
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
             });
         }
     }

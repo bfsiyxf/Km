@@ -5,17 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 
 namespace Km.Data.Repository
 {
-   public  class RoleRepository : BaseRepository<Role>,IRoleRepository  
+    public class TagRepository:BaseRepository<Tag>,ITagRepository
 
     {
-        private readonly KmContext _db;
-        public RoleRepository(KmContext db ):base(db)
+        public TagRepository(KmContext db):base(db)
         {
-            _db = db;
+
         }
     }
 }
